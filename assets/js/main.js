@@ -48,8 +48,16 @@
       },
       { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
     );
-    revealEls.forEach(function (el, i) {
-      el.style.setProperty("--i", el.closest("[data-reveal-group]") ? i % 8 : 0);
+    var groupCounters = new WeakMap();
+    revealEls.forEach(function (el) {
+      var group = el.closest("[data-reveal-group]");
+      if (group) {
+        var n = groupCounters.has(group) ? groupCounters.get(group) : 0;
+        el.style.setProperty("--i", n % 8);
+        groupCounters.set(group, n + 1);
+      } else {
+        el.style.setProperty("--i", 0);
+      }
       io.observe(el);
     });
   } else {
