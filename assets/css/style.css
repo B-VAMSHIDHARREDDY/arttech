@@ -680,7 +680,10 @@ body.nav-open{ overflow:hidden; }
   .journey-track{ grid-template-columns:1fr; gap:1.6rem; text-align:left; }
   .journey-track::before{ display:none; }
   .jstage{ display:flex; align-items:center; gap:1rem; text-align:left; padding-inline:0; }
-  .jstage h4, .jstage p{ margin-top:0; }
+  .jstage .jdot{ margin-inline:0; flex:none; }
+  .jstage-body{ display:flex; flex-direction:column; }
+  .jstage h4{ margin-top:0; }
+  .jstage p{ margin-top:.15rem; }
   .form-grid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; }
   .only-mobile{ display:block; }
