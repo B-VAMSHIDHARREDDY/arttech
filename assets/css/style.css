@@ -671,6 +671,7 @@ body.nav-open{ overflow:hidden; }
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; }
   .hero-visual{ height:400px; order:-1; }
+  .hv-lines{ display:none; }
   .hv-p6{ display:none; }
   .hv-p4{ bottom:8%; right:2%; }
   .stats{ grid-template-columns:repeat(2,1fr); }
