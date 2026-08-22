@@ -678,7 +678,11 @@ body.nav-open{ overflow:hidden; }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .trust-row{ flex-direction:column; align-items:flex-start; }
   .journey-track{ grid-template-columns:1fr; gap:1.6rem; text-align:left; }
-  .journey-track::before{ display:none; }
+  .journey-track::before{
+    top:6px; bottom:6px; left:25px; right:auto; width:2px; height:auto;
+    background:var(--gray-100); background-image:none;
+  }
+  .jstage{ position:relative; z-index:1; }
   .jstage{ display:flex; align-items:center; gap:1rem; text-align:left; padding-inline:0; }
   .jstage .jdot{ margin-inline:0; flex:none; }
   .jstage-body{ display:flex; flex-direction:column; }
