@@ -694,6 +694,7 @@ body.nav-open{ overflow:hidden; }
   .hero-meta{ gap:1.5rem 2rem; }
   .services-grid{ grid-template-columns:1fr; }
   .tech-wrap{ aspect-ratio:auto; height:520px; }
+  .tech-lines{ display:none; }
   .grid-2, .grid-3{ grid-template-columns:1fr; }
   .final-cta-actions{ flex-direction:column; width:100%; }
   .final-cta-actions .btn{ width:100%; }
