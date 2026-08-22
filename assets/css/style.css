@@ -674,6 +674,7 @@ body.nav-open{ overflow:hidden; }
   .hv-lines{ display:none; }
   .hv-p6{ display:none; }
   .hv-p4{ bottom:8%; right:2%; }
+  .tech-lines{ display:none; }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .trust-row{ flex-direction:column; align-items:flex-start; }
   .journey-track{ grid-template-columns:1fr; gap:1.6rem; text-align:left; }
