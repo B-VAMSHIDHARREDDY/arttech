@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/assets/img/logo-horizontal.png" alt="Artech IT Solutions" width={150} />
+            <img src="/assets/img/logo-horizontal.png" alt="Artech IT Solutions" />
             <p>Turning Business Ideas into Digital Solutions.</p>
             <div className="footer-social">
               <a href="#" aria-label="Instagram">

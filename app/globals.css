@@ -194,8 +194,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   box-shadow:0 10px 30px rgba(10,15,30,.08);
 }
 .brand{ display:flex; align-items:center; gap:.65rem; flex:none; }
-.brand img{ height:34px; width:auto; transition:height var(--dur-fast) var(--ease); }
-.site-header.is-scrolled .brand img{ height:28px; }
+.brand img{ height:48px; width:auto; transition:height var(--dur-fast) var(--ease); }
+.site-header.is-scrolled .brand img{ height:40px; }
 .brand-fallback{ font-family:var(--font-display); font-weight:800; font-size:1.15rem; color:var(--ink-900); }
 .brand-fallback b{ color:var(--red-500); font-weight:800; }
 
@@ -256,7 +256,7 @@ body.nav-open{ overflow:hidden; }
 /* ---------- Footer ---------- */
 .site-footer{ background:var(--gray-50); color:var(--text-muted); padding-block:4.5rem 2rem; position:relative; overflow:clip; border-top:1px solid var(--gray-100); }
 .footer-grid{ display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid var(--gray-100); }
-.footer-brand img{ height:32px; margin-bottom:1rem; }
+.footer-brand img{ height:44px; width:auto; margin-bottom:1rem; }
 .footer-brand p{ max-width:280px; font-size:.92rem; line-height:1.6; color:var(--text-muted); }
 .footer-social{ display:flex; gap:.6rem; margin-top:1.5rem; }
 .footer-social a{ width:38px; height:38px; border-radius:10px; border:1px solid var(--gray-100); background:var(--white); display:flex; align-items:center; justify-content:center; transition:all var(--dur-fast) var(--ease); }
@@ -431,7 +431,7 @@ body.nav-open{ overflow:hidden; }
 /* ===================== TECH ECOSYSTEM ===================== */
 .tech-wrap{ position:relative; max-width:900px; margin-inline:auto; aspect-ratio:16/11; }
 .tech-center{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:118px; height:118px; border-radius:50%; background:var(--white); border:1px solid var(--gray-100); display:flex; align-items:center; justify-content:center; box-shadow:0 20px 44px rgba(27,58,140,.16); z-index:2; }
-.tech-center img{ height:34px; }
+.tech-center img{ height:34px; width:auto; }
 .tech-node{
   position:absolute; display:flex; align-items:center; gap:.55rem; padding:.6rem .95rem; border-radius:100px;
   background:#fff; border:1px solid var(--gray-100); box-shadow:var(--shadow-sm); font-family:var(--font-display); font-weight:700; font-size:.82rem;
@@ -481,11 +481,8 @@ body.nav-open{ overflow:hidden; }
 @keyframes fadeIn{ from{ opacity:0; transform:translateY(10px);} to{ opacity:1; transform:translateY(0);} }
 .sol-preview-inner h4{ font-family:var(--font-display); font-size:1.3rem; color:#fff; }
 .sol-preview-inner p{ color:rgba(255,255,255,.6); font-size:.9rem; margin-top:.5rem; max-width:400px; }
-.sol-mock{ margin-top:auto; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:1.1rem; }
-.sol-mock .bar{ height:8px; border-radius:5px; background:rgba(255,255,255,.14); margin-bottom:.6rem; }
-.sol-mock .bar.w60{ width:60%; } .sol-mock .bar.w80{ width:80%; } .sol-mock .bar.w40{ width:40%; background:var(--red-400); opacity:.7; }
-.sol-mock .row{ display:flex; gap:.5rem; margin-top:.8rem; }
-.sol-mock .chipx{ flex:1; height:46px; border-radius:8px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); }
+.sol-visual{ margin-top:auto; padding-top:1.6rem; }
+.sol-visual svg{ display:block; width:100%; height:auto; border-radius:14px; box-shadow:0 20px 44px rgba(0,0,0,.35); }
 
 /* ===================== PORTFOLIO ===================== */
 .portfolio-list{ display:flex; flex-direction:column; gap:1.6rem; }
@@ -669,17 +666,12 @@ body.nav-open{ overflow:hidden; }
   .hv-p6{ display:none; }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .trust-row{ flex-direction:column; align-items:flex-start; }
-  .journey-track{ grid-template-columns:1fr; gap:1.6rem; text-align:left; }
+  .journey-track{ grid-template-columns:1fr; gap:2rem; text-align:center; }
   .journey-track::before{
-    top:6px; bottom:6px; left:25px; right:auto; width:2px; height:auto;
+    top:26px; bottom:26px; left:50%; right:auto; width:2px; height:auto; margin-left:-1px;
     background:var(--gray-100); background-image:none;
   }
-  .jstage{ position:relative; z-index:1; }
-  .jstage{ display:flex; align-items:center; gap:1rem; text-align:left; padding-inline:0; }
-  .jstage .jdot{ margin-inline:0; flex:none; }
-  .jstage-body{ display:flex; flex-direction:column; }
-  .jstage h4{ margin-top:0; }
-  .jstage p{ margin-top:.15rem; }
+  .jstage{ position:relative; z-index:1; text-align:center; padding-inline:.5rem; }
   .form-grid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; }
   .only-mobile{ display:block; }

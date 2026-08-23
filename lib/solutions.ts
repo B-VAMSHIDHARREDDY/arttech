@@ -6,8 +6,6 @@ export const solutions = [
     shortDescription: "Replace manual, repetitive tasks with automated workflows that save hours every week.",
     description:
       "Replace manual, repetitive tasks with automated workflows that save hours every week — from approvals to reporting.",
-    bars: ["w80", "w60", "w40"],
-    chips: 3,
   },
   {
     id: "sol-2",
@@ -16,8 +14,6 @@ export const solutions = [
     shortDescription: "Give clients a branded, secure place to track orders, requests and account activity.",
     description:
       "Give clients a branded, secure place to track orders, requests and account activity without emailing your team.",
-    bars: ["w60", "w80"],
-    chips: 2,
   },
   {
     id: "sol-3",
@@ -25,8 +21,6 @@ export const solutions = [
     tagline: "Sell products online",
     shortDescription: "Fast, conversion-focused storefronts with secure checkout and inventory sync.",
     description: "Fast, conversion-focused storefronts with secure checkout, inventory sync and a clean buying experience.",
-    bars: ["w40", "w80"],
-    chips: 3,
   },
   {
     id: "sol-4",
@@ -34,8 +28,6 @@ export const solutions = [
     tagline: "Appointments & reservations",
     shortDescription: "Real-time scheduling for appointments, rentals or reservations, on any device.",
     description: "Real-time scheduling for appointments, rentals or reservations, with reminders built in — on any device.",
-    bars: ["w60", "w60"],
-    chips: 2,
   },
   {
     id: "sol-5",
@@ -45,8 +37,6 @@ export const solutions = [
     shortDescription: "Track leads, projects and teams in one system built around how you actually work.",
     description:
       "Track leads, projects and teams in one system built around how you actually work, not a generic template.",
-    bars: ["w80", "w40"],
-    chips: 3,
   },
   {
     id: "sol-6",
@@ -54,8 +44,6 @@ export const solutions = [
     tagline: "Automated conversations",
     shortDescription: "Conversational assistants that answer questions, qualify leads and support customers 24/7.",
     description: "Conversational assistants that answer questions, qualify leads and support customers around the clock.",
-    bars: ["w60", "w80"],
-    chips: 2,
   },
   {
     id: "sol-7",
@@ -64,8 +52,6 @@ export const solutions = [
     tagline: "Decisions from real data",
     shortDescription: "Turn raw data into clear, real-time dashboards your team can act on.",
     description: "Turn raw data into clear, real-time dashboards your team can actually act on — not just look at.",
-    bars: ["w40", "w60"],
-    chips: 3,
   },
   {
     id: "sol-8",
@@ -75,7 +61,5 @@ export const solutions = [
     shortDescription: "Purpose-built software for complex operations, integrations and scale.",
     description:
       "Purpose-built software for complex operations, integrations and scale, engineered around your existing systems.",
-    bars: ["w80", "w80"],
-    chips: 2,
   },
 ];

@@ -129,22 +129,6 @@ export default function SiteEffects() {
       cleanups.push(() => q.removeEventListener("click", handler));
     });
 
-    /* ---------------- Solutions tabs ---------------- */
-    const solTabs = document.querySelectorAll<HTMLElement>(".sol-tab");
-    const solPreviews = document.querySelectorAll<HTMLElement>(".sol-preview-inner");
-    solTabs.forEach((tab) => {
-      const handler = () => {
-        const target = tab.getAttribute("data-target");
-        solTabs.forEach((t) => t.classList.remove("is-active"));
-        solPreviews.forEach((p) => p.classList.remove("is-active"));
-        tab.classList.add("is-active");
-        const panel = target ? document.getElementById(target) : null;
-        if (panel) panel.classList.add("is-active");
-      };
-      tab.addEventListener("click", handler);
-      cleanups.push(() => tab.removeEventListener("click", handler));
-    });
-
     /* ---------------- Testimonial carousel ---------------- */
     const track = document.querySelector<HTMLElement>(".tcarousel-track");
     if (track) {

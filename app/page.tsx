@@ -443,7 +443,7 @@ export default function HomePage() {
           </div>
           <div className="tech-wrap" data-reveal="scale">
             <div className="tech-center">
-              <img src="/assets/img/logo-icon.png" alt="Artech" width={70} />
+              <img src="/assets/img/logo-icon.png" alt="Artech" />
             </div>
             <div className="tech-node" style={{ top: "10%", left: "8%" }}><i></i>Web</div>
             <div className="tech-node" style={{ top: "4%", left: "34%", animationDelay: ".4s" }}><i></i>Mobile</div>
