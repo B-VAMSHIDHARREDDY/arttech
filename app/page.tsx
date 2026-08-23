@@ -755,21 +755,13 @@ export default function HomePage() {
                   gap: "1rem",
                 }}
               >
-                <svg width="220" height="68" viewBox="0 0 420 130" role="img" aria-label="Artech" style={{ opacity: 0.95 }}>
-                  <line x1="88" y1="14" x2="52" y2="64" stroke="#fff" strokeWidth="26" strokeLinecap="round" />
-                  <circle cx="22" cy="96" r="16" fill="#fff" />
-                  <text
-                    x="140"
-                    y="92"
-                    fontFamily="var(--font-display)"
-                    fontWeight={800}
-                    fontSize="66"
-                    letterSpacing="-1"
-                    fill="#fff"
-                  >
-                    artech
-                  </text>
-                </svg>
+                <img
+                  src="/assets/img/logo-horizontal.png"
+                  alt="Artech IT Solutions"
+                  width={200}
+                  height={62}
+                  style={{ opacity: 0.95, filter: "brightness(0) invert(1)" }}
+                />
                 <div style={{ display: "flex", gap: ".6rem", color: "#fff", fontFamily: "var(--font-display)", fontSize: ".78rem", fontWeight: 700 }}>
                   <span style={{ border: "1px solid rgba(255,255,255,.25)", padding: ".4rem .8rem", borderRadius: "100px" }}>Idea</span>
                   <span style={{ opacity: 0.4 }}>→</span>
