@@ -67,20 +67,6 @@ export default function HomePage() {
             </div>
 
             <div className="hero-visual" data-reveal="scale" style={{ transitionDelay: ".2s" }}>
-              <svg className="hv-lines" viewBox="0 0 560 560" aria-hidden="true">
-                <defs>
-                  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stopColor="#3B5FCC" />
-                    <stop offset="1" stopColor="#D8342A" />
-                  </linearGradient>
-                </defs>
-                <path d="M280,280 L80,60" />
-                <path d="M280,280 L480,90" />
-                <path d="M280,280 L40,300" />
-                <path d="M280,280 L470,380" />
-                <path d="M280,280 L160,500" />
-                <path d="M280,280 L500,320" />
-              </svg>
               <div className="hv-stage" id="hvStage">
                 <div className="hv-core">
                   <img src="/assets/img/logo-icon.png" alt="" />
@@ -456,16 +442,6 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="tech-wrap" data-reveal="scale">
-            <svg className="tech-lines" viewBox="0 0 900 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-              <line x1="450" y1="310" x2="140" y2="90" />
-              <line x1="450" y1="310" x2="760" y2="70" />
-              <line x1="450" y1="310" x2="90" y2="300" />
-              <line x1="450" y1="310" x2="800" y2="290" />
-              <line x1="450" y1="310" x2="150" y2="520" />
-              <line x1="450" y1="310" x2="740" y2="540" />
-              <line x1="450" y1="310" x2="330" y2="70" />
-              <line x1="450" y1="310" x2="590" y2="560" />
-            </svg>
             <div className="tech-center">
               <img src="/assets/img/logo-icon.png" alt="Artech" width={70} />
             </div>

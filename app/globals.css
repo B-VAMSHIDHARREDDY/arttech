@@ -356,14 +356,11 @@ body.nav-open{ overflow:hidden; }
   animation:spin 30s linear infinite;
 }
 .hv-core img{ height:38px; width:auto; }
-.hv-lines{ position:absolute; inset:0; z-index:-1; }
-.hv-lines path{ fill:none; stroke:url(#lineGrad); stroke-width:1.4; stroke-dasharray:5 7; opacity:.4; animation:dash 22s linear infinite; }
 
 @keyframes floatY{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-14px) } }
 @keyframes pulseCore{ 0%,100%{ box-shadow:0 0 0 1px var(--gray-100),0 30px 60px rgba(27,58,140,.18);} 50%{ box-shadow:0 0 0 1px var(--gray-100),0 30px 70px rgba(27,58,140,.26);} }
 @keyframes spin{ to{ transform:rotate(360deg) } }
-@keyframes dash{ to{ stroke-dashoffset:-400px } }
-@media (prefers-reduced-motion: reduce){ .hv-panel, .hv-core, .hv-core::after, .hv-lines path{ animation:none !important; } }
+@media (prefers-reduced-motion: reduce){ .hv-panel, .hv-core, .hv-core::after{ animation:none !important; } }
 
 /* ===================== TRUST STRIP ===================== */
 .trust{ background:var(--gray-50); padding-block:2.4rem; border-top:1px solid var(--gray-100); border-bottom:1px solid var(--gray-100); }
@@ -441,8 +438,6 @@ body.nav-open{ overflow:hidden; }
   animation:floatY 6s ease-in-out infinite; z-index:2;
 }
 .tech-node i{ width:9px; height:9px; border-radius:50%; background:var(--red-500); flex:none; }
-.tech-lines{ position:absolute; inset:0; z-index:1; }
-.tech-lines line{ stroke:var(--gray-300); stroke-width:1.4; stroke-dasharray:4 6; }
 
 /* ===================== AI SECTION ===================== */
 .ai-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2.5rem,5vw,5rem); align-items:center; }
@@ -671,9 +666,7 @@ body.nav-open{ overflow:hidden; }
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; }
   .hero-visual{ height:400px; order:-1; }
-  .hv-lines{ display:none; }
   .hv-p6{ display:none; }
-  .tech-lines{ display:none; }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .trust-row{ flex-direction:column; align-items:flex-start; }
   .journey-track{ grid-template-columns:1fr; gap:1.6rem; text-align:left; }
@@ -701,7 +694,6 @@ body.nav-open{ overflow:hidden; }
   .hero-meta{ gap:1.5rem 2rem; }
   .services-grid{ grid-template-columns:1fr; }
   .tech-wrap{ aspect-ratio:auto; height:520px; }
-  .tech-lines{ display:none; }
   .grid-2, .grid-3{ grid-template-columns:1fr; }
   .final-cta-actions{ flex-direction:column; width:100%; }
   .final-cta-actions .btn{ width:100%; }
