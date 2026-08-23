@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -59,6 +60,12 @@ const principles = [
 export default function AboutPage() {
   return (
     <main id="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])),
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <div className="breadcrumb">
@@ -85,7 +92,7 @@ export default function AboutPage() {
             <div className="why-visual" data-reveal="left">
               <div className="grid-overlay" aria-hidden="true"></div>
               <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src="/assets/img/logo-horizontal.png" alt="Artech IT Solutions" width={200} />
+                <img src="/assets/img/logo-horizontal.png" alt="Artech IT Solutions" width={200} height={64} />
               </div>
               <div className="ring" style={{ width: "80%", height: "80%", top: "10%", left: "10%" }}></div>
             </div>

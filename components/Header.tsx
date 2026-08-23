@@ -69,7 +69,9 @@ export default function Header() {
         <ul>
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} aria-current={pathname === link.href ? "page" : undefined}>
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>

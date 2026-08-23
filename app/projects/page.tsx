@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <main id="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }])),
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <div className="breadcrumb">

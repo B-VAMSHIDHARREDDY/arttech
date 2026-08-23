@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -23,8 +24,15 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             name: "Contact Artech IT Solutions",
+            url: `${siteConfig.url}/contact`,
             telephone: "+91-83745-24994",
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }])),
         }}
       />
 

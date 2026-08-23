@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Our Process",
@@ -24,6 +25,12 @@ const stages = [
 export default function ProcessPage() {
   return (
     <main id="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Process", path: "/process" }])),
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <div className="breadcrumb">

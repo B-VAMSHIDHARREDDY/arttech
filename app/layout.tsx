@@ -39,11 +39,9 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Artech IT Solutions",
     url: siteConfig.url,
-    images: ["/assets/img/favicon-512.png"],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/assets/img/favicon-512.png"],
   },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Services | Websites, Mobile Apps, AI & Custom Software",
@@ -22,6 +23,12 @@ const checkIcon = (
 export default function ServicesPage() {
   return (
     <main id="main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }])),
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <div className="breadcrumb">

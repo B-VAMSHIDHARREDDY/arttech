@@ -10,8 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/solutions", priority: 0.8 },
     { path: "/projects", priority: 0.7 },
     { path: "/process", priority: 0.7 },
-    { path: "/privacy", priority: 0.2 },
-    { path: "/terms", priority: 0.2 },
   ];
 
   return pages.map(({ path, priority }) => ({

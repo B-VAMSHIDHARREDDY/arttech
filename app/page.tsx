@@ -20,6 +20,37 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "What type of software do you develop?",
+    a: "We build websites, mobile applications, AI-powered tools and fully custom business software — tailored to each client's workflow rather than off-the-shelf templates.",
+  },
+  {
+    q: "Do you build mobile applications?",
+    a: "Yes. We design and develop native and cross-platform apps for Android and iOS, from early prototypes through to app-store launch.",
+  },
+  {
+    q: "Can you build AI-powered solutions?",
+    a: "Yes — from intelligent automation and chat assistants to predictive analytics and AI-driven features embedded inside your existing product.",
+  },
+  {
+    q: "How long does a project take?",
+    a: "Timelines depend on scope. A focused website may take a few weeks, while a full product build can take a few months. We'll give you a clear estimate after discovery.",
+  },
+  {
+    q: "Do you provide maintenance and support?",
+    a: "Yes. We offer ongoing maintenance, monitoring and support plans after launch, so your product keeps running smoothly as it grows.",
+  },
+  {
+    q: "Can you work with an existing product?",
+    a: "Absolutely. We regularly join projects mid-flight — auditing existing codebases, fixing issues, and extending products with new features.",
+  },
+  {
+    q: "How do we start a project?",
+    a: "Reach out through our contact page or call us directly. We'll set up a short discovery call to understand your goals and outline next steps.",
+  },
+];
+
 export default function HomePage() {
   return (
     <main id="main">
@@ -69,7 +100,7 @@ export default function HomePage() {
             <div className="hero-visual" data-reveal="scale" style={{ transitionDelay: ".2s" }}>
               <div className="hv-stage" id="hvStage">
                 <div className="hv-core">
-                  <img src="/assets/img/logo-icon.png" alt="" />
+                  <img src="/assets/img/logo-icon.png" alt="" width={148} height={142} />
                 </div>
                 <div className="hv-panel hv-p1 ic-blue">
                   <span className="ic">
@@ -443,7 +474,7 @@ export default function HomePage() {
           </div>
           <div className="tech-wrap" data-reveal="scale">
             <div className="tech-center">
-              <img src="/assets/img/logo-icon.png" alt="Artech" />
+              <img src="/assets/img/logo-icon.png" alt="Artech" width={148} height={142} />
             </div>
             <div className="tech-node" style={{ top: "10%", left: "8%" }}><i></i>Web</div>
             <div className="tech-node" style={{ top: "4%", left: "34%", animationDelay: ".4s" }}><i></i>Mobile</div>
@@ -530,12 +561,35 @@ export default function HomePage() {
             <article className="project-card" data-reveal="fade">
               <div className="project-media">
                 <span className="project-tag">Web Platform</span>
-                <svg viewBox="0 0 300 220" width="70%">
-                  <rect x="20" y="20" width="260" height="180" rx="14" fill="#ffffff10" stroke="#ffffff33" />
-                  <rect x="40" y="44" width="120" height="10" rx="5" fill="#3B5FCC" />
-                  <rect x="40" y="66" width="80" height="8" rx="4" fill="#ffffff33" />
-                  <rect x="40" y="96" width="220" height="60" rx="8" fill="#ffffff14" />
-                  <rect x="40" y="168" width="70" height="20" rx="10" fill="#D8342A" />
+                <svg viewBox="0 0 300 220" width="78%">
+                  <rect x="14" y="14" width="272" height="192" rx="12" fill="#ffffff0d" stroke="#ffffff26" />
+                  <rect x="14" y="14" width="272" height="26" rx="12" fill="#ffffff12" />
+                  <circle cx="28" cy="27" r="4" fill="#D8342A" />
+                  <circle cx="42" cy="27" r="4" fill="#ffffff55" />
+                  <circle cx="56" cy="27" r="4" fill="#ffffff33" />
+                  <rect x="92" y="22" width="110" height="10" rx="5" fill="#ffffff1f" />
+                  <rect x="14" y="40" width="54" height="166" fill="#ffffff08" />
+                  <rect x="26" y="58" width="30" height="6" rx="3" fill="#3B5FCC" />
+                  <rect x="26" y="78" width="30" height="6" rx="3" fill="#ffffff33" />
+                  <rect x="26" y="98" width="30" height="6" rx="3" fill="#ffffff33" />
+                  <rect x="26" y="118" width="30" height="6" rx="3" fill="#ffffff33" />
+                  <rect x="80" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
+                  <rect x="90" y="64" width="24" height="6" rx="3" fill="#3B5FCC" />
+                  <rect x="90" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
+                  <rect x="148" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
+                  <rect x="158" y="64" width="24" height="6" rx="3" fill="#D8342A" />
+                  <rect x="158" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
+                  <rect x="216" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
+                  <rect x="226" y="64" width="24" height="6" rx="3" fill="#3B5FCC" />
+                  <rect x="226" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
+                  <rect x="80" y="106" width="196" height="86" rx="8" fill="#ffffff0d" />
+                  <rect x="96" y="140" width="18" height="44" rx="4" fill="#3B5FCC" />
+                  <rect x="122" y="124" width="18" height="60" rx="4" fill="#ffffff33" />
+                  <rect x="148" y="150" width="18" height="34" rx="4" fill="#3B5FCC" />
+                  <rect x="174" y="112" width="18" height="72" rx="4" fill="#D8342A" />
+                  <rect x="200" y="134" width="18" height="50" rx="4" fill="#ffffff33" />
+                  <rect x="226" y="120" width="18" height="64" rx="4" fill="#3B5FCC" />
+                  <rect x="252" y="144" width="18" height="40" rx="4" fill="#ffffff33" />
                 </svg>
               </div>
               <div className="project-body">
@@ -565,12 +619,28 @@ export default function HomePage() {
             <article className="project-card" data-reveal="fade">
               <div className="project-media">
                 <span className="project-tag">Mobile App</span>
-                <svg viewBox="0 0 300 220" width="55%">
-                  <rect x="105" y="14" width="90" height="192" rx="18" fill="#ffffff10" stroke="#ffffff33" />
-                  <rect x="120" y="34" width="60" height="8" rx="4" fill="#3B5FCC" />
-                  <rect x="120" y="52" width="60" height="60" rx="8" fill="#ffffff14" />
-                  <rect x="120" y="122" width="60" height="8" rx="4" fill="#ffffff33" />
-                  <circle cx="150" cy="170" r="16" fill="#D8342A" />
+                <svg viewBox="0 0 300 220" width="46%">
+                  <rect x="95" y="8" width="110" height="204" rx="22" fill="#ffffff0d" stroke="#ffffff26" />
+                  <rect x="130" y="8" width="40" height="10" rx="5" fill="#ffffff20" />
+                  <rect x="107" y="30" width="86" height="10" rx="5" fill="#3B5FCC" />
+                  <rect x="107" y="46" width="60" height="6" rx="3" fill="#ffffff33" />
+                  <rect x="107" y="60" width="86" height="16" rx="8" fill="#ffffff14" />
+                  <circle cx="118" cy="94" r="8" fill="#3B5FCC" />
+                  <rect x="132" y="90" width="50" height="5" rx="2.5" fill="#ffffff40" />
+                  <rect x="132" y="99" width="34" height="4" rx="2" fill="#ffffff20" />
+                  <circle cx="118" cy="120" r="8" fill="#ffffff33" />
+                  <rect x="132" y="116" width="50" height="5" rx="2.5" fill="#ffffff40" />
+                  <rect x="132" y="125" width="34" height="4" rx="2" fill="#ffffff20" />
+                  <circle cx="118" cy="146" r="8" fill="#3B5FCC" />
+                  <rect x="132" y="142" width="50" height="5" rx="2.5" fill="#ffffff40" />
+                  <rect x="132" y="151" width="34" height="4" rx="2" fill="#ffffff20" />
+                  <rect x="95" y="184" width="110" height="28" rx="14" fill="#ffffff12" />
+                  <circle cx="118" cy="198" r="5" fill="#3B5FCC" />
+                  <circle cx="140" cy="198" r="5" fill="#ffffff33" />
+                  <circle cx="162" cy="198" r="5" fill="#ffffff33" />
+                  <circle cx="184" cy="198" r="5" fill="#ffffff33" />
+                  <circle cx="185" cy="176" r="15" fill="#D8342A" />
+                  <path d="M185 170v12M179 176h12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" />
                 </svg>
               </div>
               <div className="project-body">
@@ -685,7 +755,21 @@ export default function HomePage() {
                   gap: "1rem",
                 }}
               >
-                <img src="/assets/img/logo-horizontal.png" alt="Artech IT Solutions" width={180} style={{ opacity: 0.95 }} />
+                <svg width="220" height="68" viewBox="0 0 420 130" role="img" aria-label="Artech" style={{ opacity: 0.95 }}>
+                  <line x1="88" y1="14" x2="52" y2="64" stroke="#fff" strokeWidth="26" strokeLinecap="round" />
+                  <circle cx="22" cy="96" r="16" fill="#fff" />
+                  <text
+                    x="140"
+                    y="92"
+                    fontFamily="var(--font-display)"
+                    fontWeight={800}
+                    fontSize="66"
+                    letterSpacing="-1"
+                    fill="#fff"
+                  >
+                    artech
+                  </text>
+                </svg>
                 <div style={{ display: "flex", gap: ".6rem", color: "#fff", fontFamily: "var(--font-display)", fontSize: ".78rem", fontWeight: 700 }}>
                   <span style={{ border: "1px solid rgba(255,255,255,.25)", padding: ".4rem .8rem", borderRadius: "100px" }}>Idea</span>
                   <span style={{ opacity: 0.4 }}>→</span>
@@ -809,36 +893,7 @@ export default function HomePage() {
             <h2>Questions, answered.</h2>
           </div>
           <div className="faq-list">
-            {[
-              {
-                q: "What type of software do you develop?",
-                a: "We build websites, mobile applications, AI-powered tools and fully custom business software — tailored to each client's workflow rather than off-the-shelf templates.",
-              },
-              {
-                q: "Do you build mobile applications?",
-                a: "Yes. We design and develop native and cross-platform apps for Android and iOS, from early prototypes through to app-store launch.",
-              },
-              {
-                q: "Can you build AI-powered solutions?",
-                a: "Yes — from intelligent automation and chat assistants to predictive analytics and AI-driven features embedded inside your existing product.",
-              },
-              {
-                q: "How long does a project take?",
-                a: "Timelines depend on scope. A focused website may take a few weeks, while a full product build can take a few months. We'll give you a clear estimate after discovery.",
-              },
-              {
-                q: "Do you provide maintenance and support?",
-                a: "Yes. We offer ongoing maintenance, monitoring and support plans after launch, so your product keeps running smoothly as it grows.",
-              },
-              {
-                q: "Can you work with an existing product?",
-                a: "Absolutely. We regularly join projects mid-flight — auditing existing codebases, fixing issues, and extending products with new features.",
-              },
-              {
-                q: "How do we start a project?",
-                a: "Reach out through our contact page or call us directly. We'll set up a short discovery call to understand your goals and outline next steps.",
-              },
-            ].map((item) => (
+            {faqs.map((item) => (
               <div className="faq-item" key={item.q}>
                 <button className="faq-q" aria-expanded="false">
                   <span>{item.q}</span>
@@ -850,6 +905,20 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqs.map((item) => ({
+                  "@type": "Question",
+                  name: item.q,
+                  acceptedAnswer: { "@type": "Answer", text: item.a },
+                })),
+              }),
+            }}
+          />
         </div>
       </section>
 
