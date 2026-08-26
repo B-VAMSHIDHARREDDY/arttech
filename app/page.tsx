@@ -316,41 +316,101 @@ export default async function HomePage() {
           <div className="why-grid">
             <div className="why-visual" data-reveal="left">
               <div className="grid-overlay" aria-hidden="true"></div>
-              <div className="ring" style={{ width: "70%", height: "70%", top: "15%", left: "15%" }}></div>
-              <div className="ring" style={{ width: "45%", height: "45%", top: "27.5%", left: "27.5%" }}></div>
-              <div
-                className="orb"
-                style={{
-                  width: 90,
-                  height: 90,
-                  background: "radial-gradient(circle at 35% 30%,#6C87DE,#1B3A8C 70%)",
-                  top: "12%",
-                  left: "10%",
-                  animation: "floatY 6s ease-in-out infinite",
-                }}
-              ></div>
-              <div
-                className="orb"
-                style={{
-                  width: 56,
-                  height: 56,
-                  background: "radial-gradient(circle at 35% 30%,#E85B4F,#B8241C 70%)",
-                  bottom: "14%",
-                  right: "14%",
-                  animation: "floatY 7.5s ease-in-out infinite",
-                }}
-              ></div>
-              <div
-                className="orb"
-                style={{
-                  width: 36,
-                  height: 36,
-                  background: "radial-gradient(circle at 35% 30%,#fff,#6C87DE 70%)",
-                  bottom: "26%",
-                  left: "20%",
-                  animation: "floatY 5.5s ease-in-out infinite 1s",
-                }}
-              ></div>
+              <svg viewBox="0 0 300 300" width="100%" height="100%" role="img" aria-label="Five reasons businesses choose Artech, connected around the Artech mark">
+                <circle cx="150" cy="150" r="120" fill="none" stroke="#ffffff14" strokeWidth="1" strokeDasharray="2 6">
+                  <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="50s" repeatCount="indefinite" />
+                </circle>
+
+                {/* connecting lines: hub to each node */}
+                <line x1="150" y1="150" x2="150" y2="42" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="252.7" y2="116.6" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="213.5" y2="237.4" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="86.5" y2="237.4" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="47.3" y2="116.6" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+
+                {/* central hub — laptop / technology */}
+                <circle cx="150" cy="150" r="38" fill="url(#whyHubGrad)" stroke="#ffffff30" />
+                <g transform="translate(150,150)" stroke="#fff" strokeWidth="1.7" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="-15" y="-14" width="30" height="20" rx="2" />
+                  <path d="M-9.5 -8.5h13M-9.5 -3.5h9" strokeWidth="1.3" opacity="0.85" />
+                  <path d="M-21 8.5h42l3 5.5h-48z" />
+                </g>
+                <circle cx="160" cy="141" r="2" fill="#D8342A" />
+
+                {/* node 01 — Business First (target) */}
+                <g transform="translate(150,42)">
+                  <animateTransform attributeName="transform" type="translate" values="150,42; 150,36; 150,42" dur="6s" repeatCount="indefinite" />
+                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                  <g stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round">
+                    <circle r="8" />
+                    <circle r="3.6" />
+                  </g>
+                  <circle r="1.4" fill="#fff" />
+                  <circle cx="20" cy="-20" r="10" fill="#D8342A" />
+                  <text x="20" y="-16.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">1</text>
+                </g>
+
+                {/* node 02 — Modern Technology (chip) */}
+                <g transform="translate(252.7,116.6)">
+                  <animateTransform attributeName="transform" type="translate" values="252.7,116.6; 252.7,110.6; 252.7,116.6" dur="7s" repeatCount="indefinite" />
+                  <circle r="28" fill="url(#whyRed)" stroke="#ffffff30" />
+                  <g stroke="#fff" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="-6" y="-6" width="12" height="12" rx="1.6" />
+                    <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="0.8" />
+                    <path d="M-6 -2.5h-2.4M-6 2.5h-2.4M6 -2.5h2.4M6 2.5h2.4M-2.5 -6v-2.4M2.5 -6v-2.4M-2.5 6v2.4M2.5 6v2.4" />
+                  </g>
+                  <circle cx="22" cy="-18" r="10" fill="#1B3A8C" />
+                  <text x="22" y="-14.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">2</text>
+                </g>
+
+                {/* node 03 — User Experience (person) */}
+                <g transform="translate(213.5,237.4)">
+                  <animateTransform attributeName="transform" type="translate" values="213.5,237.4; 213.5,231.4; 213.5,237.4" dur="6.5s" repeatCount="indefinite" />
+                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                  <g stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cy="-4.5" r="3.4" />
+                    <path d="M-6.5 7.5c0-4 2.9-6.5 6.5-6.5s6.5 2.5 6.5 6.5" />
+                  </g>
+                  <circle cx="22" cy="20" r="10" fill="#D8342A" />
+                  <text x="22" y="23.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">3</text>
+                </g>
+
+                {/* node 04 — Scalable Solutions (bars) */}
+                <g transform="translate(86.5,237.4)">
+                  <animateTransform attributeName="transform" type="translate" values="86.5,237.4; 86.5,231.4; 86.5,237.4" dur="7.5s" repeatCount="indefinite" />
+                  <circle r="28" fill="url(#whyRed)" stroke="#ffffff30" />
+                  <path d="M-7 7V1M0 7V-6M7 7V-2" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <circle cx="-22" cy="20" r="10" fill="#1B3A8C" />
+                  <text x="-22" y="23.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">4</text>
+                </g>
+
+                {/* node 05 — Long-Term Partnership (link) */}
+                <g transform="translate(47.3,116.6)">
+                  <animateTransform attributeName="transform" type="translate" values="47.3,116.6; 47.3,110.6; 47.3,116.6" dur="5.8s" repeatCount="indefinite" />
+                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                  <g stroke="#fff" strokeWidth="1.6" fill="none">
+                    <circle cx="-3.4" r="4.4" />
+                    <circle cx="3.4" r="4.4" />
+                  </g>
+                  <circle cx="-22" cy="-18" r="10" fill="#D8342A" />
+                  <text x="-22" y="-14.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">5</text>
+                </g>
+
+                <defs>
+                  <radialGradient id="whyHubGrad" cx="35%" cy="30%" r="75%">
+                    <stop offset="0%" stopColor="#3B5FCC" />
+                    <stop offset="100%" stopColor="#0F1830" />
+                  </radialGradient>
+                  <radialGradient id="whyBlue" cx="35%" cy="30%" r="75%">
+                    <stop offset="0%" stopColor="#6C87DE" />
+                    <stop offset="100%" stopColor="#1B3A8C" />
+                  </radialGradient>
+                  <radialGradient id="whyRed" cx="35%" cy="30%" r="75%">
+                    <stop offset="0%" stopColor="#E85B4F" />
+                    <stop offset="100%" stopColor="#B8241C" />
+                  </radialGradient>
+                </defs>
+              </svg>
             </div>
             <div>
               <div className="section-head" data-reveal="fade">
