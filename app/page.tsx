@@ -322,11 +322,11 @@ export default async function HomePage() {
                 </circle>
 
                 {/* connecting lines: hub to each node */}
-                <line x1="150" y1="150" x2="150" y2="42" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
-                <line x1="150" y1="150" x2="252.7" y2="116.6" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
-                <line x1="150" y1="150" x2="213.5" y2="237.4" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
-                <line x1="150" y1="150" x2="86.5" y2="237.4" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
-                <line x1="150" y1="150" x2="47.3" y2="116.6" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="150" y2="55" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="240.35" y2="120.65" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="205.84" y2="226.86" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="94.16" y2="226.86" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
+                <line x1="150" y1="150" x2="59.65" y2="120.65" stroke="#ffffff26" strokeWidth="1.4" strokeDasharray="3 4" />
 
                 {/* central hub — laptop / technology */}
                 <circle cx="150" cy="150" r="38" fill="url(#whyHubGrad)" stroke="#ffffff30" />
@@ -338,62 +338,67 @@ export default async function HomePage() {
                 <circle cx="160" cy="141" r="2" fill="#D8342A" />
 
                 {/* node 01 — Business First (target) */}
-                <g transform="translate(150,42)">
-                  <animateTransform attributeName="transform" type="translate" values="150,42; 150,36; 150,42" dur="6s" repeatCount="indefinite" />
-                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                <g transform="translate(150,55)">
+                  <animateTransform attributeName="transform" type="translate" values="150,55; 150,49; 150,55" dur="6s" repeatCount="indefinite" />
+                  <circle r="25" fill="url(#whyBlue)" stroke="#ffffff30" />
                   <g stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round">
-                    <circle r="8" />
-                    <circle r="3.6" />
+                    <circle r="7.2" />
+                    <circle r="3.2" />
                   </g>
-                  <circle r="1.4" fill="#fff" />
-                  <circle cx="20" cy="-20" r="10" fill="#D8342A" />
-                  <text x="20" y="-16.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">1</text>
+                  <circle r="1.2" fill="#fff" />
+                  <circle cx="18" cy="-18" r="9" fill="#D8342A" />
+                  <text x="18" y="-14.8" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="9" fill="#fff">1</text>
+                  <text x="0" y="-33" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={700} fontSize="9.5" fill="#fff" opacity="0.92">Business First</text>
                 </g>
 
                 {/* node 02 — Modern Technology (chip) */}
-                <g transform="translate(252.7,116.6)">
-                  <animateTransform attributeName="transform" type="translate" values="252.7,116.6; 252.7,110.6; 252.7,116.6" dur="7s" repeatCount="indefinite" />
-                  <circle r="28" fill="url(#whyRed)" stroke="#ffffff30" />
-                  <g stroke="#fff" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="-6" y="-6" width="12" height="12" rx="1.6" />
-                    <rect x="-2.2" y="-2.2" width="4.4" height="4.4" rx="0.8" />
-                    <path d="M-6 -2.5h-2.4M-6 2.5h-2.4M6 -2.5h2.4M6 2.5h2.4M-2.5 -6v-2.4M2.5 -6v-2.4M-2.5 6v2.4M2.5 6v2.4" />
+                <g transform="translate(240.35,120.65)">
+                  <animateTransform attributeName="transform" type="translate" values="240.35,120.65; 240.35,114.65; 240.35,120.65" dur="7s" repeatCount="indefinite" />
+                  <circle r="25" fill="url(#whyRed)" stroke="#ffffff30" />
+                  <g stroke="#fff" strokeWidth="1.4" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="-5.4" y="-5.4" width="10.8" height="10.8" rx="1.4" />
+                    <rect x="-2" y="-2" width="4" height="4" rx="0.7" />
+                    <path d="M-5.4 -2.2h-2.2M-5.4 2.2h-2.2M5.4 -2.2h2.2M5.4 2.2h2.2M-2.2 -5.4v-2.2M2.2 -5.4v-2.2M-2.2 5.4v2.2M2.2 5.4v2.2" />
                   </g>
-                  <circle cx="22" cy="-18" r="10" fill="#1B3A8C" />
-                  <text x="22" y="-14.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">2</text>
+                  <circle cx="19" cy="-16" r="9" fill="#1B3A8C" />
+                  <text x="19" y="-12.8" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="9" fill="#fff">2</text>
+                  <text x="0" y="-33" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={700} fontSize="9.5" fill="#fff" opacity="0.92">Modern Tech</text>
                 </g>
 
                 {/* node 03 — User Experience (person) */}
-                <g transform="translate(213.5,237.4)">
-                  <animateTransform attributeName="transform" type="translate" values="213.5,237.4; 213.5,231.4; 213.5,237.4" dur="6.5s" repeatCount="indefinite" />
-                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                <g transform="translate(205.84,226.86)">
+                  <animateTransform attributeName="transform" type="translate" values="205.84,226.86; 205.84,220.86; 205.84,226.86" dur="6.5s" repeatCount="indefinite" />
+                  <circle r="25" fill="url(#whyBlue)" stroke="#ffffff30" />
                   <g stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cy="-4.5" r="3.4" />
-                    <path d="M-6.5 7.5c0-4 2.9-6.5 6.5-6.5s6.5 2.5 6.5 6.5" />
+                    <circle cy="-4" r="3" />
+                    <path d="M-5.8 6.6c0-3.5 2.6-5.8 5.8-5.8s5.8 2.3 5.8 5.8" />
                   </g>
-                  <circle cx="22" cy="20" r="10" fill="#D8342A" />
-                  <text x="22" y="23.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">3</text>
+                  <circle cx="19" cy="18" r="9" fill="#D8342A" />
+                  <text x="19" y="21.2" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="9" fill="#fff">3</text>
+                  <text x="0" y="41" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={700} fontSize="9.5" fill="#fff" opacity="0.92">User Experience</text>
                 </g>
 
                 {/* node 04 — Scalable Solutions (bars) */}
-                <g transform="translate(86.5,237.4)">
-                  <animateTransform attributeName="transform" type="translate" values="86.5,237.4; 86.5,231.4; 86.5,237.4" dur="7.5s" repeatCount="indefinite" />
-                  <circle r="28" fill="url(#whyRed)" stroke="#ffffff30" />
-                  <path d="M-7 7V1M0 7V-6M7 7V-2" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  <circle cx="-22" cy="20" r="10" fill="#1B3A8C" />
-                  <text x="-22" y="23.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">4</text>
+                <g transform="translate(94.16,226.86)">
+                  <animateTransform attributeName="transform" type="translate" values="94.16,226.86; 94.16,220.86; 94.16,226.86" dur="7.5s" repeatCount="indefinite" />
+                  <circle r="25" fill="url(#whyRed)" stroke="#ffffff30" />
+                  <path d="M-6.2 6.2V0.8M0 6.2V-5.2M6.2 6.2V-1.8" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <circle cx="-19" cy="18" r="9" fill="#1B3A8C" />
+                  <text x="-19" y="21.2" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="9" fill="#fff">4</text>
+                  <text x="0" y="41" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={700} fontSize="9.5" fill="#fff" opacity="0.92">Scalable</text>
                 </g>
 
                 {/* node 05 — Long-Term Partnership (link) */}
-                <g transform="translate(47.3,116.6)">
-                  <animateTransform attributeName="transform" type="translate" values="47.3,116.6; 47.3,110.6; 47.3,116.6" dur="5.8s" repeatCount="indefinite" />
-                  <circle r="28" fill="url(#whyBlue)" stroke="#ffffff30" />
+                <g transform="translate(59.65,120.65)">
+                  <animateTransform attributeName="transform" type="translate" values="59.65,120.65; 59.65,114.65; 59.65,120.65" dur="5.8s" repeatCount="indefinite" />
+                  <circle r="25" fill="url(#whyBlue)" stroke="#ffffff30" />
                   <g stroke="#fff" strokeWidth="1.6" fill="none">
-                    <circle cx="-3.4" r="4.4" />
-                    <circle cx="3.4" r="4.4" />
+                    <circle cx="-3" r="3.9" />
+                    <circle cx="3" r="3.9" />
                   </g>
-                  <circle cx="-22" cy="-18" r="10" fill="#D8342A" />
-                  <text x="-22" y="-14.5" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="10" fill="#fff">5</text>
+                  <circle cx="-19" cy="-16" r="9" fill="#D8342A" />
+                  <text x="-19" y="-12.8" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={800} fontSize="9" fill="#fff">5</text>
+                  <text x="0" y="-33" textAnchor="middle" fontFamily="var(--font-display)" fontWeight={700} fontSize="9.5" fill="#fff" opacity="0.92">Partnership</text>
                 </g>
 
                 <defs>
