@@ -754,7 +754,8 @@ body.nav-open{ overflow:hidden; }
   }
   .jstage{ position:relative; z-index:1; text-align:center; padding-inline:.5rem; }
   .form-grid{ grid-template-columns:1fr; }
-  .footer-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr 1fr; gap:2.2rem 1.5rem; }
+  .footer-brand{ grid-column:1 / -1; }
   .only-mobile{ display:block; }
   .only-desktop{ display:none; }
 }
