@@ -6,6 +6,7 @@
     "role": "Founder, Placeholder Retail Co.",
     "rating": 5,
     "initials": "RK",
+    "photo": "",
     "createdAt": "1970-01-01T00:00:00.000Z",
     "updatedAt": "1970-01-01T00:00:00.000Z"
   },
@@ -16,6 +17,7 @@
     "role": "Ops Lead, Placeholder Bookings",
     "rating": 5,
     "initials": "SN",
+    "photo": "",
     "createdAt": "1970-01-01T00:00:00.000Z",
     "updatedAt": "1970-01-01T00:00:00.000Z"
   },
@@ -26,6 +28,7 @@
     "role": "Director, Placeholder Logistics",
     "rating": 5,
     "initials": "AV",
+    "photo": "",
     "createdAt": "1970-01-01T00:00:00.000Z",
     "updatedAt": "1970-01-01T00:00:00.000Z"
   }

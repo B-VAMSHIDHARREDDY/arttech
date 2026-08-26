@@ -615,7 +615,8 @@ body.nav-open{ overflow:hidden; }
 .tcard .stars svg{ width:15px; height:15px; fill:var(--red-500); }
 .tcard p{ font-size:.98rem; color:var(--ink-700); line-height:1.65; flex:1; }
 .tcard .who{ display:flex; align-items:center; gap:.8rem; margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid var(--line); }
-.tcard .avatar{ width:42px; height:42px; border-radius:50%; background:linear-gradient(150deg,var(--blue-600),var(--blue-400)); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:.85rem; flex:none; }
+.tcard .avatar{ width:42px; height:42px; border-radius:50%; background:linear-gradient(150deg,var(--blue-600),var(--blue-400)); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:.85rem; flex:none; overflow:hidden; }
+.tcard .avatar img{ width:100%; height:100%; object-fit:cover; }
 .tcard .who b{ display:block; font-family:var(--font-display); font-size:.9rem; }
 .tcard .who span{ font-size:.78rem; color:var(--text-muted); }
 .tcarousel-nav{ display:flex; gap:.6rem; justify-content:center; margin-top:1.5rem; }

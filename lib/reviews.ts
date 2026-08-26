@@ -9,6 +9,7 @@ export type Review = {
   quote: string;
   rating: number; // 1-5
   initials: string;
+  photo: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -18,6 +19,7 @@ export type ReviewInput = {
   role: string;
   quote: string;
   rating: number;
+  photo?: string;
 };
 
 const DATA_FILE = path.join(process.cwd(), "data", "reviews.json");
@@ -31,6 +33,7 @@ const DEFAULT_REVIEWS: Review[] = [
     role: "Founder, Placeholder Retail Co.",
     rating: 5,
     initials: "RK",
+    photo: "",
     createdAt: new Date(0).toISOString(),
     updatedAt: new Date(0).toISOString(),
   },
@@ -42,6 +45,7 @@ const DEFAULT_REVIEWS: Review[] = [
     role: "Ops Lead, Placeholder Bookings",
     rating: 5,
     initials: "SN",
+    photo: "",
     createdAt: new Date(0).toISOString(),
     updatedAt: new Date(0).toISOString(),
   },
@@ -53,6 +57,7 @@ const DEFAULT_REVIEWS: Review[] = [
     role: "Director, Placeholder Logistics",
     rating: 5,
     initials: "AV",
+    photo: "",
     createdAt: new Date(0).toISOString(),
     updatedAt: new Date(0).toISOString(),
   },
@@ -90,13 +95,14 @@ function initialsFromName(name: string): string {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-function sanitizeInput(input: ReviewInput): ReviewInput {
+function sanitizeInput(input: ReviewInput) {
   const rating = Math.min(5, Math.max(1, Math.round(Number(input.rating) || 5)));
   return {
     name: String(input.name || "").trim().slice(0, 120),
     role: String(input.role || "").trim().slice(0, 160),
     quote: String(input.quote || "").trim().slice(0, 1000),
     rating,
+    photo: String(input.photo || "").trim().slice(0, 500),
   };
 }
 

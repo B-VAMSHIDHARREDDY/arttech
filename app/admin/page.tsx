@@ -4,10 +4,11 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import type { Review } from "@/lib/reviews";
 import AdminNav from "./AdminNav";
+import ImageUploadField from "./ImageUploadField";
 
-type FormState = { name: string; role: string; quote: string; rating: number };
+type FormState = { name: string; role: string; quote: string; rating: number; photo: string };
 
-const EMPTY_FORM: FormState = { name: "", role: "", quote: "", rating: 5 };
+const EMPTY_FORM: FormState = { name: "", role: "", quote: "", rating: 5, photo: "" };
 
 export default function AdminDashboardPage() {
   const router = useRouter();
@@ -77,7 +78,7 @@ export default function AdminDashboardPage() {
 
   function startEdit(review: Review) {
     setEditingId(review.id);
-    setEditForm({ name: review.name, role: review.role, quote: review.quote, rating: review.rating });
+    setEditForm({ name: review.name, role: review.role, quote: review.quote, rating: review.rating, photo: review.photo || "" });
   }
 
   async function handleSaveEdit(e: FormEvent) {
@@ -178,6 +179,14 @@ export default function AdminDashboardPage() {
                   required
                 />
               </div>
+              <div className="admin-field full">
+                <ImageUploadField
+                  id="add-photo"
+                  label="Client photo (optional — falls back to initials)"
+                  value={addForm.photo}
+                  onChange={(url) => setAddForm({ ...addForm, photo: url })}
+                />
+              </div>
             </div>
             <button type="submit" className="admin-btn" disabled={adding} style={{ marginTop: "0.5rem" }}>
               {adding ? "Adding…" : "Add review"}
@@ -194,6 +203,14 @@ export default function AdminDashboardPage() {
           <div className="admin-review-list">
             {reviews.map((r) => (
               <div className="admin-review-card" key={r.id}>
+                <span className="avatar">
+                  {r.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={r.photo} alt="" />
+                  ) : (
+                    r.initials
+                  )}
+                </span>
                 <div className="body">
                   <p className="quote">&quot;{r.quote}&quot;</p>
                   <div className="meta">
@@ -265,6 +282,12 @@ export default function AdminDashboardPage() {
                   required
                 />
               </div>
+              <ImageUploadField
+                id="edit-photo"
+                label="Client photo (optional — falls back to initials)"
+                value={editForm.photo}
+                onChange={(url) => setEditForm({ ...editForm, photo: url })}
+              />
               <div className="admin-modal-actions">
                 <button type="button" className="admin-btn ghost" onClick={() => setEditingId(null)}>
                   Cancel

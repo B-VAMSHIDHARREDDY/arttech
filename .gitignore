@@ -19,3 +19,6 @@ Thumbs.db
 *.log
 *.tsbuildinfo
 next-env.d.ts
+
+# admin-uploaded images (runtime content, not source)
+/public/uploads/

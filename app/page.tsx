@@ -828,7 +828,14 @@ export default async function HomePage() {
                   </div>
                   <p>&quot;{t.quote}&quot;</p>
                   <div className="who">
-                    <span className="avatar">{t.initials}</span>
+                    <span className="avatar">
+                      {t.photo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={t.photo} alt="" />
+                      ) : (
+                        t.initials
+                      )}
+                    </span>
                     <div>
                       <b>{t.name}</b>
                       <span>{t.role}</span>

@@ -4,6 +4,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import type { Project } from "@/lib/projects";
 import AdminNav from "../AdminNav";
+import ImageUploadField from "../ImageUploadField";
 
 type FormState = {
   tag: string;
@@ -255,16 +256,6 @@ export default function AdminProjectsPage() {
                 />
               </div>
               <div className="admin-field">
-                <label htmlFor="add-image">Image URL / path</label>
-                <input
-                  id="add-image"
-                  placeholder="/assets/img/projects/example.jpg"
-                  value={addForm.image}
-                  onChange={(e) => setAddForm({ ...addForm, image: e.target.value })}
-                  required
-                />
-              </div>
-              <div className="admin-field">
                 <label htmlFor="add-link">Website link (optional)</label>
                 <input
                   id="add-link"
@@ -273,13 +264,16 @@ export default function AdminProjectsPage() {
                   onChange={(e) => setAddForm({ ...addForm, link: e.target.value })}
                 />
               </div>
-            </div>
-            {addForm.image && (
-              <div className="admin-image-preview">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={addForm.image} alt="Preview" />
+              <div className="admin-field full">
+                <ImageUploadField
+                  id="add-image"
+                  label="Project image"
+                  value={addForm.image}
+                  onChange={(url) => setAddForm({ ...addForm, image: url })}
+                  required
+                />
               </div>
-            )}
+            </div>
             <button type="submit" className="admin-btn" disabled={adding} style={{ marginTop: "0.8rem" }}>
               {adding ? "Adding…" : "Add project"}
             </button>
@@ -394,15 +388,6 @@ export default function AdminProjectsPage() {
                   />
                 </div>
                 <div className="admin-field">
-                  <label htmlFor="edit-image">Image URL / path</label>
-                  <input
-                    id="edit-image"
-                    value={editForm.image}
-                    onChange={(e) => setEditForm({ ...editForm, image: e.target.value })}
-                    required
-                  />
-                </div>
-                <div className="admin-field">
                   <label htmlFor="edit-link">Website link (optional)</label>
                   <input
                     id="edit-link"
@@ -411,12 +396,13 @@ export default function AdminProjectsPage() {
                   />
                 </div>
               </div>
-              {editForm.image && (
-                <div className="admin-image-preview">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={editForm.image} alt="Preview" />
-                </div>
-              )}
+              <ImageUploadField
+                id="edit-image"
+                label="Project image"
+                value={editForm.image}
+                onChange={(url) => setEditForm({ ...editForm, image: url })}
+                required
+              />
               <div className="admin-modal-actions">
                 <button type="button" className="admin-btn ghost" onClick={() => setEditingId(null)}>
                   Cancel
