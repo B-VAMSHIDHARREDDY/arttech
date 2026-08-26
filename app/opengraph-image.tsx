@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import { readFileSync } from "fs";
-import { join } from "path";
 
 export const runtime = "nodejs";
 export const alt = "Artech IT Solutions — Websites, Mobile Apps & AI Solutions";
@@ -8,8 +6,6 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
-  const logo = readFileSync(join(process.cwd(), "public/assets/img/logo-horizontal.png")).toString("base64");
-
   return new ImageResponse(
     (
       <div
@@ -25,8 +21,18 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`data:image/png;base64,${logo}`} width={280} height={89} alt="" />
+        <div style={{ display: "flex", alignItems: "center", gap: "22px" }}>
+          <svg width="72" height="69" viewBox="0 0 100 96">
+            <line x1="36" y1="68" x2="78" y2="18" stroke="#ffffff" strokeWidth="24" strokeLinecap="round" />
+            <circle cx="17" cy="80" r="15" fill="#ffffff" />
+          </svg>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ fontSize: 56, fontWeight: 800, color: "#ffffff", lineHeight: 1 }}>artech</div>
+            <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "6px", color: "#9db2f2", marginTop: "6px" }}>
+              IT SOLUTIONS
+            </div>
+          </div>
+        </div>
         <div
           style={{
             marginTop: 56,

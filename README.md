@@ -68,9 +68,8 @@ public/assets/img/         Logo marks and favicons
   and results.
 - **Testimonials** on the home page (`app/page.tsx`) are placeholder quotes — replace with real client reviews.
 - **Stats** in the trust strip (`40+ Projects`, `25+ Businesses`, etc.) are placeholders — update with real numbers.
-- **Email address** `hello@artechitsolutions.in` — confirm/update to the real inbox.
-- **Social links** in the footer (`components/Footer.tsx`) point to `#` — add real Instagram / LinkedIn / Facebook /
-  YouTube URLs.
+- **Social links** in the footer (`components/Footer.tsx`) — Instagram and LinkedIn are set; Facebook and YouTube
+  still point to `#` — add real URLs if those accounts exist.
 - **Privacy Policy & Terms** are starting templates only — have them reviewed by a lawyer before publishing.
 - **Contact form** (`app/contact/page.tsx`) currently shows a success state on submit but does not send data
   anywhere — wire it up to an email service or serverless function (e.g. Resend, Formspree, a Next.js Route Handler).

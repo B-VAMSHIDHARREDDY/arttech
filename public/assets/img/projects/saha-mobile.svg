@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1100 401" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F1E"/>
+      <stop offset="1" stop-color="#122B79"/>
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#122047"/>
+      <stop offset="1" stop-color="#0A0F1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="401" fill="url(#bg)"/>
+
+  <!-- decorative dotted grid -->
+  <g opacity="0.12">
+    <circle cx="120" cy="80" r="2" fill="#fff"/>
+    <circle cx="160" cy="80" r="2" fill="#fff"/>
+    <circle cx="200" cy="80" r="2" fill="#fff"/>
+    <circle cx="960" cy="90" r="2" fill="#fff"/>
+    <circle cx="1000" cy="90" r="2" fill="#fff"/>
+    <circle cx="900" cy="320" r="2" fill="#fff"/>
+    <circle cx="940" cy="320" r="2" fill="#fff"/>
+  </g>
+
+  <!-- left copy -->
+  <g fill="#ffffff">
+    <text x="90" y="150" font-family="Arial, sans-serif" font-weight="800" font-size="40" fill="#ffffff">Saha</text>
+    <text x="90" y="184" font-family="Arial, sans-serif" font-weight="600" font-size="19" fill="#9db2f2">Home Services, on demand</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#ffffffcc">
+    <circle cx="98" cy="228" r="4" fill="#D8342A"/>
+    <text x="112" y="233">Book a professional in minutes</text>
+    <circle cx="98" cy="258" r="4" fill="#3B5FCC"/>
+    <text x="112" y="263">Live scheduling &amp; tracking</text>
+    <circle cx="98" cy="288" r="4" fill="#D8342A"/>
+    <text x="112" y="293">Secure in-app payments</text>
+  </g>
+
+  <!-- phone mockup -->
+  <g transform="translate(700,20)">
+    <rect x="0" y="0" width="220" height="361" rx="30" fill="#ffffff14" stroke="#ffffff33" stroke-width="2"/>
+    <rect x="10" y="10" width="200" height="341" rx="22" fill="url(#phoneScreen)"/>
+    <rect x="80" y="18" width="60" height="9" rx="4.5" fill="#ffffff30"/>
+
+    <!-- app header -->
+    <text x="26" y="58" font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Home Services</text>
+    <rect x="26" y="72" width="168" height="28" rx="14" fill="#ffffff14"/>
+    <text x="38" y="90" font-family="Arial, sans-serif" font-size="11" fill="#ffffff70">Search a service…</text>
+
+    <!-- service cards -->
+    <g>
+      <rect x="26" y="112" width="76" height="66" rx="12" fill="#3B5FCC33"/>
+      <circle cx="64" cy="138" r="12" fill="#3B5FCC"/>
+      <path d="M58 138h12M64 132v12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      <text x="64" y="166" font-family="Arial, sans-serif" font-size="10" fill="#ffffffcc" text-anchor="middle">Cleaning</text>
+    </g>
+    <g>
+      <rect x="118" y="112" width="76" height="66" rx="12" fill="#D8342A33"/>
+      <circle cx="156" cy="138" r="12" fill="#D8342A"/>
+      <path d="M150 144l12-12M150 132h12v12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="156" y="166" font-family="Arial, sans-serif" font-size="10" fill="#ffffffcc" text-anchor="middle">Repairs</text>
+    </g>
+    <g>
+      <rect x="26" y="188" width="76" height="66" rx="12" fill="#3B5FCC33"/>
+      <circle cx="64" cy="214" r="12" fill="#3B5FCC"/>
+      <path d="M58 220c0-6 4-10 6-10s6 4 6 10" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <text x="64" y="242" font-family="Arial, sans-serif" font-size="10" fill="#ffffffcc" text-anchor="middle">Plumbing</text>
+    </g>
+    <g>
+      <rect x="118" y="188" width="76" height="66" rx="12" fill="#D8342A33"/>
+      <circle cx="156" cy="214" r="12" fill="#D8342A"/>
+      <path d="M151 208l10 12M161 208l-10 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      <text x="156" y="242" font-family="Arial, sans-serif" font-size="10" fill="#ffffffcc" text-anchor="middle">Electrical</text>
+    </g>
+
+    <!-- booking bar -->
+    <rect x="26" y="270" width="168" height="46" rx="14" fill="#ffffff10"/>
+    <circle cx="48" cy="293" r="10" fill="#3B5FCC"/>
+    <rect x="66" y="285" width="70" height="6" rx="3" fill="#ffffff55"/>
+    <rect x="66" y="296" width="50" height="5" rx="2.5" fill="#ffffff30"/>
+    <rect x="152" y="282" width="42" height="22" rx="11" fill="#D8342A"/>
+    <text x="173" y="297" font-family="Arial, sans-serif" font-weight="700" font-size="9" fill="#fff" text-anchor="middle">Book</text>
+
+    <!-- bottom nav -->
+    <rect x="10" y="328" width="200" height="23" rx="11" fill="#ffffff10"/>
+    <circle cx="40" cy="339" r="4.5" fill="#3B5FCC"/>
+    <circle cx="70" cy="339" r="4.5" fill="#ffffff33"/>
+    <circle cx="100" cy="339" r="4.5" fill="#ffffff33"/>
+    <circle cx="130" cy="339" r="4.5" fill="#ffffff33"/>
+  </g>
+</svg>

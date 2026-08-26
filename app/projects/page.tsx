@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { projects } from "@/lib/projects";
+import { getProjects } from "@/lib/projects";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProjectsPage() {
+export const revalidate = 0;
+
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+
   return (
     <main id="main">
       <script
@@ -37,8 +41,7 @@ export default function ProjectsPage() {
             <span style={{ color: "#1B3A8C" }}>digital experiences.</span>
           </h1>
           <p className="lead">
-            The projects below are clearly-marked placeholders illustrating how we document real work — replace with
-            live case studies as projects ship.
+            A look at the businesses we&apos;ve helped launch and grow online.
           </p>
         </div>
       </section>
@@ -47,13 +50,13 @@ export default function ProjectsPage() {
         <div className="wrap">
           <div className="portfolio-list">
             {projects.map((p) => (
-              <article className="project-card" data-reveal="fade" key={p.title}>
+              <article className="project-card" data-reveal="fade" key={p.id}>
                 <div className="project-media">
                   <span className="project-tag">{p.tag}</span>
-                  {p.media}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.image} alt={p.title} />
                 </div>
                 <div className="project-body">
-                  <p className="placeholder-note">Placeholder Project — replace with real case study</p>
                   <h3>{p.title}</h3>
                   <p>{p.description}</p>
                   <div className="project-meta">
@@ -79,12 +82,21 @@ export default function ProjectsPage() {
                       <span key={s}>{s}</span>
                     ))}
                   </div>
-                  <Link href="/contact" className="text-link">
-                    View Project{" "}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </Link>
+                  {p.link ? (
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="text-link">
+                      Visit Website{" "}
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <Link href="/contact" className="text-link">
+                      Enquire About This{" "}
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

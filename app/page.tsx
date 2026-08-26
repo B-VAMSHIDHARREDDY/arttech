@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import SolutionsPreview from "@/components/SolutionsPreview";
+import { getReviews } from "@/lib/reviews";
+import { getProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Artech IT Solutions | Websites, Mobile Apps & AI Solutions",
@@ -51,7 +53,12 @@ const faqs = [
   },
 ];
 
-export default function HomePage() {
+export const revalidate = 0;
+
+export default async function HomePage() {
+  const reviews = await getReviews();
+  const projects = await getProjects();
+
   return (
     <main id="main">
       {/* ============ HERO ============ */}
@@ -558,114 +565,36 @@ export default function HomePage() {
           </div>
 
           <div className="portfolio-list">
-            <article className="project-card" data-reveal="fade">
-              <div className="project-media">
-                <span className="project-tag">Web Platform</span>
-                <svg viewBox="0 0 300 220" width="78%">
-                  <rect x="14" y="14" width="272" height="192" rx="12" fill="#ffffff0d" stroke="#ffffff26" />
-                  <rect x="14" y="14" width="272" height="26" rx="12" fill="#ffffff12" />
-                  <circle cx="28" cy="27" r="4" fill="#D8342A" />
-                  <circle cx="42" cy="27" r="4" fill="#ffffff55" />
-                  <circle cx="56" cy="27" r="4" fill="#ffffff33" />
-                  <rect x="92" y="22" width="110" height="10" rx="5" fill="#ffffff1f" />
-                  <rect x="14" y="40" width="54" height="166" fill="#ffffff08" />
-                  <rect x="26" y="58" width="30" height="6" rx="3" fill="#3B5FCC" />
-                  <rect x="26" y="78" width="30" height="6" rx="3" fill="#ffffff33" />
-                  <rect x="26" y="98" width="30" height="6" rx="3" fill="#ffffff33" />
-                  <rect x="26" y="118" width="30" height="6" rx="3" fill="#ffffff33" />
-                  <rect x="80" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
-                  <rect x="90" y="64" width="24" height="6" rx="3" fill="#3B5FCC" />
-                  <rect x="90" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
-                  <rect x="148" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
-                  <rect x="158" y="64" width="24" height="6" rx="3" fill="#D8342A" />
-                  <rect x="158" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
-                  <rect x="216" y="54" width="60" height="40" rx="8" fill="#ffffff14" />
-                  <rect x="226" y="64" width="24" height="6" rx="3" fill="#3B5FCC" />
-                  <rect x="226" y="76" width="36" height="8" rx="4" fill="#ffffff40" />
-                  <rect x="80" y="106" width="196" height="86" rx="8" fill="#ffffff0d" />
-                  <rect x="96" y="140" width="18" height="44" rx="4" fill="#3B5FCC" />
-                  <rect x="122" y="124" width="18" height="60" rx="4" fill="#ffffff33" />
-                  <rect x="148" y="150" width="18" height="34" rx="4" fill="#3B5FCC" />
-                  <rect x="174" y="112" width="18" height="72" rx="4" fill="#D8342A" />
-                  <rect x="200" y="134" width="18" height="50" rx="4" fill="#ffffff33" />
-                  <rect x="226" y="120" width="18" height="64" rx="4" fill="#3B5FCC" />
-                  <rect x="252" y="144" width="18" height="40" rx="4" fill="#ffffff33" />
-                </svg>
-              </div>
-              <div className="project-body">
-                <p className="placeholder-note">Placeholder Project — replace with real case study</p>
-                <h3>Retail Operations Platform</h3>
-                <p>
-                  <strong>Problem:</strong> Manual inventory tracking across stores caused stock errors.
-                  <br />
-                  <strong>Solution:</strong> A unified web platform with real-time sync and role-based dashboards.
-                  <br />
-                  <strong>Result:</strong> Faster stock accuracy and fewer reporting errors.
-                </p>
-                <div className="project-stack">
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>PostgreSQL</span>
+            {projects.slice(0, 2).map((p) => (
+              <article className="project-card" data-reveal="fade" key={p.id}>
+                <div className="project-media">
+                  <span className="project-tag">{p.tag}</span>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.image} alt={p.title} />
                 </div>
-                <Link href="/projects" className="text-link">
-                  View Project{" "}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
-              </div>
-            </article>
-
-            <article className="project-card" data-reveal="fade">
-              <div className="project-media">
-                <span className="project-tag">Mobile App</span>
-                <svg viewBox="0 0 300 220" width="46%">
-                  <rect x="95" y="8" width="110" height="204" rx="22" fill="#ffffff0d" stroke="#ffffff26" />
-                  <rect x="130" y="8" width="40" height="10" rx="5" fill="#ffffff20" />
-                  <rect x="107" y="30" width="86" height="10" rx="5" fill="#3B5FCC" />
-                  <rect x="107" y="46" width="60" height="6" rx="3" fill="#ffffff33" />
-                  <rect x="107" y="60" width="86" height="16" rx="8" fill="#ffffff14" />
-                  <circle cx="118" cy="94" r="8" fill="#3B5FCC" />
-                  <rect x="132" y="90" width="50" height="5" rx="2.5" fill="#ffffff40" />
-                  <rect x="132" y="99" width="34" height="4" rx="2" fill="#ffffff20" />
-                  <circle cx="118" cy="120" r="8" fill="#ffffff33" />
-                  <rect x="132" y="116" width="50" height="5" rx="2.5" fill="#ffffff40" />
-                  <rect x="132" y="125" width="34" height="4" rx="2" fill="#ffffff20" />
-                  <circle cx="118" cy="146" r="8" fill="#3B5FCC" />
-                  <rect x="132" y="142" width="50" height="5" rx="2.5" fill="#ffffff40" />
-                  <rect x="132" y="151" width="34" height="4" rx="2" fill="#ffffff20" />
-                  <rect x="95" y="184" width="110" height="28" rx="14" fill="#ffffff12" />
-                  <circle cx="118" cy="198" r="5" fill="#3B5FCC" />
-                  <circle cx="140" cy="198" r="5" fill="#ffffff33" />
-                  <circle cx="162" cy="198" r="5" fill="#ffffff33" />
-                  <circle cx="184" cy="198" r="5" fill="#ffffff33" />
-                  <circle cx="185" cy="176" r="15" fill="#D8342A" />
-                  <path d="M185 170v12M179 176h12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="project-body">
-                <p className="placeholder-note">Placeholder Project — replace with real case study</p>
-                <h3>On-Demand Booking App</h3>
-                <p>
-                  <strong>Problem:</strong> Customers had no easy way to book services on the go.
-                  <br />
-                  <strong>Solution:</strong> A cross-platform mobile app with live scheduling and payments.
-                  <br />
-                  <strong>Result:</strong> Smoother booking flow and fewer missed appointments.
-                </p>
-                <div className="project-stack">
-                  <span>React Native</span>
-                  <span>Firebase</span>
-                  <span>Stripe</span>
+                <div className="project-body">
+                  <h3>{p.title}</h3>
+                  <p>
+                    <strong>Problem:</strong> {p.problem}
+                    <br />
+                    <strong>Solution:</strong> {p.solution}
+                    <br />
+                    <strong>Result:</strong> {p.result}
+                  </p>
+                  <div className="project-stack">
+                    {p.stack.map((s) => (
+                      <span key={s}>{s}</span>
+                    ))}
+                  </div>
+                  <Link href="/projects" className="text-link">
+                    View Project{" "}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </Link>
                 </div>
-                <Link href="/projects" className="text-link">
-                  View Project{" "}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
 
           <div className="center" style={{ marginTop: "2.5rem" }} data-reveal="fade">
@@ -755,13 +684,22 @@ export default function HomePage() {
                   gap: "1rem",
                 }}
               >
-                <img
-                  src="/assets/img/logo-horizontal.png"
-                  alt="Artech IT Solutions"
-                  width={200}
-                  height={62}
-                  style={{ opacity: 0.95, filter: "brightness(0) invert(1)" }}
-                />
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: ".3rem" }} role="img" aria-label="Artech IT Solutions">
+                  <img src="/assets/img/logo-mark-white.png" alt="" width={210} height={41} />
+                  <div
+                    style={{
+                      fontFamily: "var(--font-jakarta)",
+                      fontWeight: 700,
+                      fontSize: ".56rem",
+                      letterSpacing: ".22em",
+                      opacity: 0.85,
+                      color: "#fff",
+                      marginLeft: "125px",
+                    }}
+                  >
+                    IT SOLUTIONS
+                  </div>
+                </div>
                 <div style={{ display: "flex", gap: ".6rem", color: "#fff", fontFamily: "var(--font-display)", fontSize: ".78rem", fontWeight: 700 }}>
                   <span style={{ border: "1px solid rgba(255,255,255,.25)", padding: ".4rem .8rem", borderRadius: "100px" }}>Idea</span>
                   <span style={{ opacity: 0.4 }}>→</span>
@@ -814,37 +752,15 @@ export default function HomePage() {
           <div className="section-head center" data-reveal="fade">
             <span className="eyebrow">Testimonials</span>
             <h2>What our clients say.</h2>
-            <p className="lead">Placeholder reviews shown until real client testimonials are added.</p>
+            <p className="lead">Real feedback from the businesses we&apos;ve built with.</p>
           </div>
 
           <div className="tcarousel" data-reveal="fade">
             <div className="tcarousel-track">
-              {[
-                {
-                  quote:
-                    "Artech understood our workflow before writing a single line of code. The final platform fit our business exactly, not a generic template.",
-                  initials: "RK",
-                  name: "Ravi Kumar",
-                  role: "Founder, Placeholder Retail Co.",
-                },
-                {
-                  quote:
-                    "The mobile app they built handles thousands of bookings without a hitch. Communication throughout the project was clear and fast.",
-                  initials: "SN",
-                  name: "Sanya Nair",
-                  role: "Ops Lead, Placeholder Bookings",
-                },
-                {
-                  quote:
-                    "We came in with a rough idea and Artech shaped it into a real product roadmap, then delivered it in phases we could actually budget for.",
-                  initials: "AV",
-                  name: "Aman Verma",
-                  role: "Director, Placeholder Logistics",
-                },
-              ].map((t) => (
-                <article className="tcard" key={t.name}>
+              {reviews.map((t) => (
+                <article className="tcard" key={t.id}>
                   <div className="stars">
-                    {[0, 1, 2, 3, 4].map((s) => (
+                    {Array.from({ length: t.rating }).map((_, s) => (
                       <svg viewBox="0 0 20 20" key={s}>
                         <path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 15l-5.6 3.1 1.4-6.3L1 7.5l6.4-.6L10 1z" />
                       </svg>

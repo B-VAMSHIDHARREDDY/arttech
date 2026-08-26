@@ -1,0 +1,32 @@
+[
+  {
+    "id": "seed-1",
+    "quote": "Artech understood our workflow before writing a single line of code. The final platform fit our business exactly, not a generic template.",
+    "name": "Ravi Kumar",
+    "role": "Founder, Placeholder Retail Co.",
+    "rating": 5,
+    "initials": "RK",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "seed-2",
+    "quote": "The mobile app they built handles thousands of bookings without a hitch. Communication throughout the project was clear and fast.",
+    "name": "Sanya Nair",
+    "role": "Ops Lead, Placeholder Bookings",
+    "rating": 5,
+    "initials": "SN",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "seed-3",
+    "quote": "We came in with a rough idea and Artech shaped it into a real product roadmap, then delivered it in phases we could actually budget for.",
+    "name": "Aman Verma",
+    "role": "Director, Placeholder Logistics",
+    "rating": 5,
+    "initials": "AV",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  }
+]

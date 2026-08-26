@@ -27,6 +27,8 @@ export default function Header() {
     document.body.classList.toggle("nav-open", navOpen);
   }, [navOpen]);
 
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <>
       <header className={`site-header${scrolled ? " is-scrolled" : ""}`} id="siteHeader">

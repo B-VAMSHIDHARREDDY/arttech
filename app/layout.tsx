@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { siteConfig } from "@/lib/site";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -65,7 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description:
                 "Artech IT Solutions builds modern websites, mobile applications, AI solutions and custom software.",
               telephone: "+91-83745-24994",
-              sameAs: [],
+              email: siteConfig.email,
+              sameAs: [siteConfig.linkedin, siteConfig.instagram],
             }),
           }}
         />
@@ -77,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <WhatsAppFloat />
         <SiteEffects />
       </body>
     </html>

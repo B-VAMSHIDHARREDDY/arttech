@@ -1,0 +1,56 @@
+[
+  {
+    "id": "seed-saha",
+    "tag": "Mobile App",
+    "title": "Saha — Home Services App",
+    "description": "A mobile app connecting customers with trusted home service professionals — cleaning, repairs, plumbing and electrical work — booked in a few taps.",
+    "problem": "Finding a reliable home service professional on short notice was slow and unpredictable.",
+    "solution": "An on-demand mobile app for browsing, booking and tracking home service professionals in real time.",
+    "result": "Faster bookings and a smoother experience for customers and service providers alike.",
+    "stack": [
+      "Mobile App",
+      "Live Scheduling",
+      "In-App Payments"
+    ],
+    "image": "/assets/img/projects/saha-mobile.svg",
+    "link": "",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "seed-livemurrel",
+    "tag": "E-commerce",
+    "title": "Livemurrel.com — Fresh Fish Delivery",
+    "description": "An online store for ordering farm-fresh live murrel fish, with category browsing and location-based delivery.",
+    "problem": "Customers had no reliable way to order fresh, live fish online for doorstep delivery.",
+    "solution": "A full e-commerce platform for browsing, ordering and delivering fresh fish by location.",
+    "result": "A live, functioning online fish delivery business reaching customers directly.",
+    "stack": [
+      "E-commerce",
+      "Live Inventory",
+      "Location-based Delivery"
+    ],
+    "image": "/assets/img/projects/livemurrel-hero.jpg",
+    "link": "https://livemurrel.com/",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "seed-villagecuts",
+    "tag": "E-commerce",
+    "title": "The Village Cuts — Fresh Meat Delivery",
+    "description": "An online store for ordering fresh, hygienically-packed meat with doorstep delivery.",
+    "problem": "Customers wanted premium, hygienically-packed meat without a trip to the butcher.",
+    "solution": "An e-commerce platform for browsing cuts, ordering online and scheduling doorstep delivery.",
+    "result": "A live online meat delivery business serving customers directly from the website.",
+    "stack": [
+      "E-commerce",
+      "Order Tracking",
+      "Doorstep Delivery"
+    ],
+    "image": "/assets/img/projects/thevillagecuts-hero.jpg",
+    "link": "https://thevillagecuts.com/",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "updatedAt": "1970-01-01T00:00:00.000Z"
+  }
+]

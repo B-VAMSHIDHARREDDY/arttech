@@ -251,28 +251,6 @@ export default function SiteEffects() {
       });
     }
 
-    /* ---------------- Contact form (demo submit + success state) ---------------- */
-    const contactForm = document.getElementById("contactForm") as HTMLFormElement | null;
-    if (contactForm) {
-      const submitHandler = (e: Event) => {
-        e.preventDefault();
-        const required = contactForm.querySelectorAll<HTMLInputElement>("[required]");
-        let valid = true;
-        required.forEach((f) => {
-          if (!f.value.trim()) valid = false;
-        });
-        if (!valid) {
-          contactForm.reportValidity && contactForm.reportValidity();
-          return;
-        }
-        contactForm.style.display = "none";
-        const success = document.getElementById("formSuccess");
-        if (success) success.classList.add("is-visible");
-      };
-      contactForm.addEventListener("submit", submitHandler);
-      cleanups.push(() => contactForm.removeEventListener("submit", submitHandler));
-    }
-
     return () => {
       cleanups.forEach((fn) => fn());
     };
