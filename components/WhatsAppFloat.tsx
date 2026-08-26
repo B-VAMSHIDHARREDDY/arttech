@@ -3,13 +3,30 @@
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
 
+const STARTER_MESSAGES = [
+  "Hi! I'd like to know more about your services.",
+  "Hello, I'm planning a new project and wanted to discuss it with your team.",
+  "Hi there! Could you share more details about your pricing?",
+  "Hey, I saw your website and I'm interested in building a mobile app.",
+  "Hi, I'd like to talk about a custom software solution for my business.",
+  "Hello! Could someone help me understand your AI solutions?",
+];
+
 export default function WhatsAppFloat() {
   const pathname = usePathname();
   if (pathname?.startsWith("/admin")) return null;
 
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
+    const message = STARTER_MESSAGES[Math.floor(Math.random() * STARTER_MESSAGES.length)];
+    const url = `${siteConfig.whatsappHref}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <a
       href={siteConfig.whatsappHref}
+      onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float wa-attract"
